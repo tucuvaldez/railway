@@ -13,3 +13,13 @@ app.get("/", (req, res) => {
 app.get("/bye", (req, res) => {
   res.send(`Goodbye Railway App`);
 });
+
+app.get("/user", (req, res) => {
+  if (process.env.ENVIROMENT === "production") {
+    res.send(`Obteniendo usuarios de la base de datos productiva`);
+  } else {
+    res.send(
+      `Obteniendo usuarios de la base de datos de prueba ${process.env.TESTDB}`
+    );
+  }
+});
