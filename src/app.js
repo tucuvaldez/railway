@@ -9,3 +9,7 @@ app.listen(PORT, console.log(`Listening on ${PORT}`));
 app.get("/", (req, res) => {
   res.send(`Hello Railway App`);
 });
+
+app.get("/bye", (req, res) => {
+  res.send(`Goodbye Railway App`);
+});
