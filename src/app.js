@@ -23,3 +23,6 @@ app.get("/user", (req, res) => {
     );
   }
 });
+app.get("/env", (req, res) => {
+  res.send(`Solicitando el entorno: ${process.env.deploymentTest}`);
+});
